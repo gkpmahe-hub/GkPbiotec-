@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Thalassa Marine Biosciences</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <a href="index.html" class="brand"><span class="mark">◐</span> Thalassa Marine Biosciences</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="research.html">R&amp;D Lab</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Sourcing partnerships, research collaboration, or investment enquiries.</h1>
+  </div>
+</section>
+
+<section>
+  <div class="wrap grid cols-2">
+    <div>
+      <h3>Send a message</h3>
+      <form class="contact" onsubmit="event.preventDefault(); alert('This is a placeholder form — connect it to Formspree, Netlify Forms, or a backend endpoint before launch.');">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="topic">Enquiry type</label>
+          <select id="topic" name="topic">
+            <option>Raw material / harbour sourcing partnership</option>
+            <option>Product distribution enquiry</option>
+            <option>Microbiome consultation / research collaboration</option>
+            <option>Investment</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn primary" style="width:fit-content; border:none; cursor:pointer;">Send message</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Registered contact (placeholder)</h3>
+      <p>Kerala / Puducherry, India</p>
+      <p style="margin-top:18px; font-family:var(--mono); font-size:0.85rem;">hello@thalassamarine.example</p>
+      <p style="margin-top:24px; font-size:0.88rem; color:#5b6a68;">Replace this block with your actual registered office address, phone number and email once incorporation is complete.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="research.html">R&amp;D Lab</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">© 2026 Thalassa Marine Biosciences Pvt. Ltd. (proposed name).</div>
+  </div>
+</footer>
+
+</body>
+</html>
