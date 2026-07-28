@@ -16,6 +16,14 @@
   --ink-text:   #12201F;
   --mist:       rgba(245,241,232,0.72);
 
+  /* product-category accents, used on homepage icon badges and card tops */
+  --c1: #F2704B; /* peptide supplement — coral */
+  --c2: #E8B84B; /* sponge — amber */
+  --c3: #2C8C90; /* matrix — teal (brand) */
+  --c4: #9A6FD1; /* allied lines — violet */
+  --c5: #4FD8B0; /* services — mint */
+  --c6: #4FA8E8; /* R&D — sky blue */
+
   --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
   --sans:  "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
   --mono:  "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
@@ -89,7 +97,10 @@ nav.wrap ul a:hover{ color: var(--glow); }
 /* ---------- Hero ---------- */
 .hero{
   position: relative;
-  background: radial-gradient(120% 160% at 15% 0%, #163F51 0%, var(--ink) 55%, #081821 100%);
+  background:
+    radial-gradient(60% 70% at 85% 10%, rgba(242,112,75,0.16) 0%, transparent 60%),
+    radial-gradient(55% 65% at 10% 90%, rgba(79,216,176,0.14) 0%, transparent 60%),
+    radial-gradient(120% 160% at 15% 0%, #163F51 0%, var(--ink) 55%, #081821 100%);
   color: var(--paper);
   overflow: hidden;
   padding: 96px 0 120px;
@@ -163,7 +174,7 @@ section{ padding: 88px 0; }
   padding-top: 36px; margin-top: 20px;
 }
 .stat-strip .stat b{
-  font-family: var(--serif); font-size:1.8rem; display:block; color: var(--teal-dim);
+  font-family: var(--serif); font-size:1.8rem; display:block; color: var(--sc, var(--teal-dim));
 }
 .stat-strip .stat span{ font-family: var(--mono); font-size:0.72rem; letter-spacing:.05em; color:#5b6a68; text-transform:uppercase; }
 
@@ -194,6 +205,17 @@ section{ padding: 88px 0; }
 .card.on-dark .tag{ background: rgba(143,240,200,0.12); color: var(--glow); }
 .card.on-dark h3{ color: var(--paper); }
 .card.on-dark p, .card.on-dark ul{ color: var(--mist); }
+
+/* colored product cards (accent = one of --c1..--c6, set inline per card) */
+.card.accent{ border-top: 4px solid var(--accent); }
+.icon-badge{
+  width: 52px; height: 52px; border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  margin-bottom: 16px;
+}
+.icon-badge svg{ width: 26px; height:26px; }
+.card.on-dark .icon-badge{ background: color-mix(in srgb, var(--accent) 22%, transparent); }
 
 /* process / lab list */
 .lab-row{
